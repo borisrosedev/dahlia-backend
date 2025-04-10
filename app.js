@@ -1,9 +1,13 @@
 const express = require('express')
 const cors = require('cors')
+const testConnection = require('./app/db/testConnection')
 require('dotenv').config()
 
 
 const app = express()
+
+
+testConnection()
 
 app.use(express.json({
     limit: '10mb'
