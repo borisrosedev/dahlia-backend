@@ -1,7 +1,23 @@
-POST http://localhost:3000/api/v1/users 
-Content-Type: multipart/form-data
+POST http://localhost:3000/api/v1/users
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
-firstname: marine
-lastname: dupont
-email: marine@gmail.com
-password: 10Caroline10!!
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+marine@gmail.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="password"
+
+marine10
+
+marine@gmail.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="firstname"
+
+marinette
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="photo"; filename="test.png"
+Content-Type: image/jpg
+
+< ./test.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
