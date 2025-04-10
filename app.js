@@ -6,7 +6,6 @@ require('dotenv').config()
 
 const app = express()
 
-
 testConnection()
 
 app.use(express.json({
