@@ -1,4 +1,4 @@
-const { DataTypes , Model } = require('sequelize')
+const { DataTypes , Model } = require('sequelize')
 const bcrypt = require('bcrypt')
 const dbClient = require('../dbClient')
 
@@ -36,7 +36,6 @@ User.init({
         set(value) {
             this.setDataValue('password', bcrypt.hashSync(value, 10))
         }
-
     },
     photo: {
         type: DataTypes.STRING,
@@ -56,7 +55,13 @@ User.init({
 })
 
 
-console.log(User === dbClient.models.User)
-User.sync({
-    alter: true
-})
+// async function synWithDb() {
+//     await User.sync({
+//         alter: true
+//     })
+// }
+
+// synWithDb()
+
+
+module.exports = User
