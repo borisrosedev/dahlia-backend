@@ -1,0 +1,19 @@
+
+
+
+services:
+  dahlia_postgres:
+    image: postgres:16
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+
+  dahlia_adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
