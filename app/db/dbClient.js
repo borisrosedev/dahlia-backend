@@ -4,6 +4,8 @@ require('dotenv').config({
     path: path.resolve(__dirname, "../../.env")
 })
 
+console.log(process.env.DB_NAME)
+
 const dbClient = new Sequelize(
     process.env.DB_NAME, 
     process.env.DB_USER, 
