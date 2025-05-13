@@ -8,16 +8,27 @@ marine@gmail.com
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="password"
 
-marine10
-
-marine@gmail.com
+marine10!!
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="firstname"
 
 marinette
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="photo"; filename="test.png"
+Content-Disposition: form-data; name="lastname"
+
+dupont
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="photo"; filename="test.jpg"
 Content-Type: image/jpg
 
 < ./test.jpg
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+###
+
+POST http://localhost:3000/api/v1/users/login 
+Content-Type: application/json
+
+{
+    "email":"boris.rose.dev@gmail.com",
+    "password":"10Caroline10!!"
+}
